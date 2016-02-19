@@ -20,6 +20,8 @@ public class InnerClassTest {
 	}
 }
 
+/**
+
 class TalkingClock
 {
 	public TalkingClock(int interval, boolean beep)
@@ -52,3 +54,4 @@ class TalkingClock
 		
 	}
 }
+**/
