@@ -1,5 +1,9 @@
 package com.fivedots.hello;
 
+import java.awt.Dimension;
+import java.awt.Image;
+import java.awt.Toolkit;
+
 import javax.swing.JFrame;
 
 /**
@@ -20,7 +24,18 @@ class SimpleFrame extends JFrame
 {
 	public SimpleFrame()
 	{
-		setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
+		Toolkit kit = Toolkit.getDefaultToolkit();
+		Dimension screensize = kit.getScreenSize();
+		
+		int screenWidth = screensize.width;
+		int screenHeight = screensize.height;
+		
+		setSize(screenWidth / 2, screenHeight / 2);
+		setTitle("Simple Frame Test");
+		setLocationByPlatform(true);
+		
+		Image img = kit.getImage("F:\\workspace\\tutorials\\src\\icon.gif");
+		setIconImage(img);
 		
 	}
 	
